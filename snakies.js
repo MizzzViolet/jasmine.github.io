@@ -9,6 +9,7 @@
 	var d;
 	var food;
 	var score;
+	var dead = 1;
 	var press = 0;
 	var snake_array; 
 	var button = {
@@ -23,7 +24,7 @@
 	function doMouseDown(event) {
 	  x = event.pageX - canvas.offsetLeft;
 	  y = event.pageY - canvas.offsetTop;
-	  if (x>=210 && x<=300 && y>=207 && y<=242) {
+	  if (x>=210 && x<=300 && y>=207 && y<=242 && dead == 1) {
 	     init();
 	  }
 	}
@@ -38,6 +39,7 @@
 	function init()
 	{
 			score = 0;
+			dead = 0;
 			d = "right"; 
 			create_snake();
 			create_food(); 
@@ -81,6 +83,7 @@
 		{
 			clearInterval(game_loop);
 			start();
+			dead = 1;
 			return;
 		}
 		if(nx == food.x && ny == food.y)
