@@ -79,7 +79,7 @@
 		else if(d == "up") ny--;
 		else if(d == "down") ny++;
 		
-		if(nx == -1 || nx == w/cw || ny == -1 || ny == h/cw || check_collision(nx, ny, snake_array))
+		if(nx == -1 || nx == w/cw || ny == -1 || ny == h/cw )
 		{
 			clearInterval(game_loop);
 			start();
