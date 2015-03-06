@@ -78,7 +78,8 @@
 		else if(d == "left") nx--;
 		else if(d == "up") ny--;
 		else if(d == "down") ny++;
-		
+
+
 		if(nx == -1 || nx == w/cw || ny == -1 || ny == h/cw )
 		{
 			clearInterval(game_loop);
@@ -92,7 +93,7 @@
 			score++;
 			create_food();
 		}
-		else
+		else 
 		{
 			var tail = snake_array.pop(); //pops out the last cell
 			tail.x = nx; tail.y = ny;
@@ -125,7 +126,7 @@
 		ctx.strokeRect(x*cw, y*cw, cw, cw);
 	}
 	
-	function check_collision(x, y, array)
+/*	function check_collision(x, y, array)
 	{
 		for(var i = 0; i < array.length; i++)
 		{
@@ -133,7 +134,7 @@
 			 return true;
 		}
 		return false;
-	}
+	} */
 	var keysDown = {};
 	window.addEventListener('keydown', function(e) {
 	    keysDown[e.keyCode] = true;
