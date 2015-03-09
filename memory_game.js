@@ -2,6 +2,17 @@ var array = ['10','10','11','11','12','12','13','13','14','14','22','22','26','2
 var values = [];
 var id = [];
 var flipped = 0;
+
+// setInterval(function () {
+//     var d = new Date();
+//     var seconds = d.getMinutes() * 60 + d.getSeconds(); //convet 00:00 to seconds for easier caculation
+//     var fiveMin = 60 * 5; //five minutes is 300 seconds!
+//     var timeleft = fiveMin - seconds % fiveMin; // let's say 01:30, then current seconds is 90, 90%300 = 90, then 300-90 = 210. That's the time left!
+//     var result = parseInt(timeleft / 60) + ':' + timeleft % 60; //formart seconds into 00:00 
+//     document.getElementById('timer').innerHTML = result;
+
+// }, 500)
+
 Array.prototype.memory_tile_shuffle = function(){
     var i = 0, j, temp;
     while(i++ < (this.length-1)){
